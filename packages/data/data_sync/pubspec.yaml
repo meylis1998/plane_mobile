@@ -1,0 +1,29 @@
+name: data_sync
+description: Offline sync engine with queue and conflict resolution.
+publish_to: 'none'
+version: 0.1.0
+
+resolution: workspace
+
+environment:
+  sdk: ^3.10.0
+  flutter: ">=3.38.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  core_foundation:
+    path: ../../core/core_foundation
+  core_network:
+    path: ../../core/core_network
+  core_storage:
+    path: ../../core/core_storage
+  domain_core:
+    path: ../../domain/domain_core
+  connectivity_plus: ^6.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^6.0.0
+  mocktail: ^1.0.4

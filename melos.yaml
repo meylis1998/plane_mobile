@@ -1,0 +1,40 @@
+name: plane_mobile
+repository: https://github.com/makeplane/plane-mobile
+
+packages:
+  - apps/*
+  - packages/core/*
+  - packages/domain/*
+  - packages/data/*
+  - packages/features/*
+  - packages/presentation/*
+  - packages/services/*
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+
+scripts:
+  analyze:
+    run: melos exec -- dart analyze .
+    description: Run dart analyze in all packages.
+
+  format:
+    run: melos exec -- dart format .
+    description: Format all packages.
+
+  build_runner:
+    run: melos exec -- dart run build_runner build --delete-conflicting-outputs
+    description: Run build_runner in all packages.
+    packageFilters:
+      dependsOn: build_runner
+
+  test:
+    run: melos exec -- flutter test
+    description: Run tests in all packages.
+    packageFilters:
+      dirExists: test
+
+  clean:
+    run: melos exec -- flutter clean
+    description: Clean all packages.

@@ -1,0 +1,84 @@
+name: plane_app
+description: Plane Flutter mobile app - open-source project management.
+publish_to: 'none'
+version: 1.0.0+1
+
+resolution: workspace
+
+environment:
+  sdk: ^3.10.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Core
+  core_foundation:
+    path: ../../packages/core/core_foundation
+  core_network:
+    path: ../../packages/core/core_network
+  core_storage:
+    path: ../../packages/core/core_storage
+  core_realtime:
+    path: ../../packages/core/core_realtime
+  core_di:
+    path: ../../packages/core/core_di
+
+  # Domain
+  domain_core:
+    path: ../../packages/domain/domain_core
+
+  # Data
+  data_repository:
+    path: ../../packages/data/data_repository
+  data_sync:
+    path: ../../packages/data/data_sync
+
+  # Features
+  feature_auth:
+    path: ../../packages/features/feature_auth
+  feature_workspace:
+    path: ../../packages/features/feature_workspace
+  feature_project:
+    path: ../../packages/features/feature_project
+  feature_work_items:
+    path: ../../packages/features/feature_work_items
+  feature_cycles:
+    path: ../../packages/features/feature_cycles
+  feature_modules:
+    path: ../../packages/features/feature_modules
+  feature_pages:
+    path: ../../packages/features/feature_pages
+  feature_search:
+    path: ../../packages/features/feature_search
+  feature_notifications:
+    path: ../../packages/features/feature_notifications
+
+  # Presentation
+  ui_components:
+    path: ../../packages/presentation/ui_components
+  theme:
+    path: ../../packages/presentation/theme
+
+  # Services
+  file_service:
+    path: ../../packages/services/file_service
+  ai_service:
+    path: ../../packages/services/ai_service
+
+  # State Management
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.5.0
+
+  # Navigation
+  go_router: ^14.8.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^6.0.0
+  build_runner: ^2.4.14
+  riverpod_generator: ^2.6.1
+
+flutter:
+  uses-material-design: true

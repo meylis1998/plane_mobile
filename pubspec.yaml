@@ -1,0 +1,34 @@
+name: plane_mobile
+description: Plane Flutter mobile app monorepo.
+publish_to: 'none'
+
+environment:
+  sdk: ^3.10.0
+
+workspace:
+  - apps/plane_app
+  - packages/core/core_foundation
+  - packages/core/core_network
+  - packages/core/core_storage
+  - packages/core/core_realtime
+  - packages/core/core_di
+  - packages/domain/domain_core
+  - packages/data/data_repository
+  - packages/data/data_sync
+  - packages/features/feature_auth
+  - packages/features/feature_workspace
+  - packages/features/feature_project
+  - packages/features/feature_work_items
+  - packages/features/feature_cycles
+  - packages/features/feature_modules
+  - packages/features/feature_pages
+  - packages/features/feature_search
+  - packages/features/feature_notifications
+  - packages/presentation/ui_components
+  - packages/presentation/theme
+  - packages/services/file_service
+  - packages/services/ai_service
+
+dev_dependencies:
+  melos: ^7.4.0
+  very_good_analysis: ^6.0.0

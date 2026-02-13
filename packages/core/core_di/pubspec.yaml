@@ -1,0 +1,31 @@
+name: core_di
+description: Dependency injection setup with Riverpod.
+publish_to: 'none'
+version: 0.1.0
+
+resolution: workspace
+
+environment:
+  sdk: ^3.10.0
+  flutter: ">=3.38.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  core_foundation:
+    path: ../core_foundation
+  core_network:
+    path: ../core_network
+  core_storage:
+    path: ../core_storage
+  core_realtime:
+    path: ../core_realtime
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^6.0.0
+  build_runner: ^2.4.14
+  riverpod_generator: ^2.6.1

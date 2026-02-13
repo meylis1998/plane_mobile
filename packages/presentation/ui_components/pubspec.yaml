@@ -1,0 +1,26 @@
+name: ui_components
+description: Shared widget library - buttons, cards, dialogs, etc.
+publish_to: 'none'
+version: 0.1.0
+
+resolution: workspace
+
+environment:
+  sdk: ^3.10.0
+  flutter: ">=3.38.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  core_foundation:
+    path: ../../core/core_foundation
+  theme:
+    path: ../theme
+  cached_network_image: ^3.4.1
+  flutter_svg: ^2.0.17
+  shimmer: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^6.0.0
