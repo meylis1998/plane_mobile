@@ -18,10 +18,13 @@ dependencies:
     path: ../core_network
   core_storage:
     path: ../core_storage
-  core_realtime:
-    path: ../core_realtime
+  domain_core:
+    path: ../../domain/domain_core
+  data_repository:
+    path: ../../data/data_repository
   flutter_riverpod: ^2.6.1
   riverpod_annotation: ^2.5.0
+  connectivity_plus: ^6.1.1
 
 dev_dependencies:
   flutter_test:

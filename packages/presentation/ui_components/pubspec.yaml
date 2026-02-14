@@ -16,6 +16,8 @@ dependencies:
     path: ../../core/core_foundation
   theme:
     path: ../theme
+  domain_core:
+    path: ../../domain/domain_core
   cached_network_image: ^3.4.1
   flutter_svg: ^2.0.17
   shimmer: ^3.0.0

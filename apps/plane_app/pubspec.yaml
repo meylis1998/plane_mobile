@@ -1,84 +1,62 @@
 name: plane_app
-description: Plane Flutter mobile app - open-source project management.
+description: Plane mobile application.
 publish_to: 'none'
-version: 1.0.0+1
+version: 0.1.0
 
 resolution: workspace
 
 environment:
   sdk: ^3.10.0
+  flutter: ">=3.38.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
-
-  # Core
-  core_foundation:
-    path: ../../packages/core/core_foundation
-  core_network:
-    path: ../../packages/core/core_network
-  core_storage:
-    path: ../../packages/core/core_storage
-  core_realtime:
-    path: ../../packages/core/core_realtime
+  ai_service:
+    path: ../../packages/services/ai_service
   core_di:
     path: ../../packages/core/core_di
-
-  # Domain
-  domain_core:
-    path: ../../packages/domain/domain_core
-
-  # Data
-  data_repository:
-    path: ../../packages/data/data_repository
+  core_realtime:
+    path: ../../packages/core/core_realtime
+  core_storage:
+    path: ../../packages/core/core_storage
+  cupertino_icons: ^1.0.8
   data_sync:
     path: ../../packages/data/data_sync
-
-  # Features
+  domain_core:
+    path: ../../packages/domain/domain_core
+  feature_analytics:
+    path: ../../packages/features/feature_analytics
   feature_auth:
     path: ../../packages/features/feature_auth
-  feature_workspace:
-    path: ../../packages/features/feature_workspace
-  feature_project:
-    path: ../../packages/features/feature_project
-  feature_work_items:
-    path: ../../packages/features/feature_work_items
   feature_cycles:
     path: ../../packages/features/feature_cycles
   feature_modules:
     path: ../../packages/features/feature_modules
-  feature_pages:
-    path: ../../packages/features/feature_pages
-  feature_search:
-    path: ../../packages/features/feature_search
   feature_notifications:
     path: ../../packages/features/feature_notifications
-
-  # Presentation
-  ui_components:
-    path: ../../packages/presentation/ui_components
+  feature_pages:
+    path: ../../packages/features/feature_pages
+  feature_project:
+    path: ../../packages/features/feature_project
+  feature_search:
+    path: ../../packages/features/feature_search
+  feature_work_items:
+    path: ../../packages/features/feature_work_items
+  feature_workspace:
+    path: ../../packages/features/feature_workspace
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.6.1
+  go_router: ^14.8.1
+  push_notification_service:
+    path: ../../packages/services/push_notification_service
   theme:
     path: ../../packages/presentation/theme
-
-  # Services
-  file_service:
-    path: ../../packages/services/file_service
-  ai_service:
-    path: ../../packages/services/ai_service
-
-  # State Management
-  flutter_riverpod: ^2.6.1
-  riverpod_annotation: ^2.5.0
-
-  # Navigation
-  go_router: ^14.8.1
+  ui_components:
+    path: ../../packages/presentation/ui_components
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.14.3
+  flutter_native_splash: ^2.4.3
   flutter_test:
     sdk: flutter
   very_good_analysis: ^6.0.0
-  build_runner: ^2.4.14
-  riverpod_generator: ^2.6.1
-
-flutter:
-  uses-material-design: true

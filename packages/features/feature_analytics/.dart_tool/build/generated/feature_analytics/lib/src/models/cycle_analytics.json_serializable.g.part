@@ -1,0 +1,35 @@
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$CycleAnalyticsImpl _$$CycleAnalyticsImplFromJson(Map<String, dynamic> json) =>
+    _$CycleAnalyticsImpl(
+      velocity: (json['velocity'] as num).toDouble(),
+      completionRate: (json['completionRate'] as num).toDouble(),
+      burndownData: (json['burndownData'] as List<dynamic>)
+          .map((e) => BurndownPoint.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      issuesByState: (json['issuesByState'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry($enumDecode(_$StateGroupEnumMap, k), (e as num).toInt()),
+      ),
+    );
+
+Map<String, dynamic> _$$CycleAnalyticsImplToJson(
+  _$CycleAnalyticsImpl instance,
+) => <String, dynamic>{
+  'velocity': instance.velocity,
+  'completionRate': instance.completionRate,
+  'burndownData': instance.burndownData,
+  'issuesByState': instance.issuesByState.map(
+    (k, e) => MapEntry(_$StateGroupEnumMap[k]!, e),
+  ),
+};
+
+const _$StateGroupEnumMap = {
+  StateGroup.backlog: 'backlog',
+  StateGroup.unstarted: 'unstarted',
+  StateGroup.started: 'started',
+  StateGroup.completed: 'completed',
+  StateGroup.cancelled: 'cancelled',
+};

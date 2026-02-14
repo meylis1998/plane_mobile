@@ -1,0 +1,27 @@
+Plane is an open-source project management tool that helps teams plan, track, and manage their software development projects with ease.
+
+Key Features:
+
+- Work Items: Create, assign, and track work items with priorities, labels, states, and due dates. Organize work across multiple projects and workspaces.
+
+- Cycles: Plan sprints and iterations with time-boxed cycles. Monitor progress with burn-down charts and completion metrics.
+
+- Modules: Group related work items into modules for feature-level tracking. Visualize dependencies and progress across your roadmap.
+
+- Pages: Collaborate with rich-text documents powered by a full-featured editor. Link pages to work items for seamless context.
+
+- Views & Filters: Create custom views with powerful filtering by state, priority, assignee, label, and more. Save views for quick access.
+
+- Real-time Collaboration: See live updates from your team. Changes sync instantly across all devices.
+
+- Offline Support: Keep working without an internet connection. Changes sync automatically when you reconnect.
+
+- Notifications: Stay on top of mentions, assignments, and state changes with in-app and push notifications.
+
+- Analytics: Gain insights into your team's velocity, workload distribution, and project health with built-in analytics dashboards.
+
+- AI-Powered: Leverage AI assistance for writing descriptions, generating subtasks, and summarizing discussions.
+
+Plane works with both Plane Cloud (https://app.plane.so) and self-hosted Plane instances, giving you full control over your data.
+
+Whether you follow Agile, Scrum, Kanban, or your own workflow, Plane adapts to the way your team works.

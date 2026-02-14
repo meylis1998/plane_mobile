@@ -10,18 +10,33 @@ environment:
   flutter: ">=3.38.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
   core_foundation:
     path: ../../core/core_foundation
   core_network:
     path: ../../core/core_network
+  dio: ^5.8.0
+  domain_core:
+    path: ../../domain/domain_core
   file_picker: ^8.1.7
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.6.1
+  freezed_annotation: ^2.4.4
   image_picker: ^1.1.2
+  json_annotation: ^4.9.0
   path_provider: ^2.1.5
+  riverpod_annotation: ^2.5.0
+  theme:
+    path: ../../presentation/theme
+  ui_components:
+    path: ../../presentation/ui_components
 
 dev_dependencies:
+  build_runner: ^2.4.14
   flutter_test:
     sdk: flutter
-  very_good_analysis: ^6.0.0
+  freezed: ^2.5.7
+  json_serializable: ^6.9.0
   mocktail: ^1.0.4
+  riverpod_generator: ^2.6.1
+  very_good_analysis: ^6.0.0

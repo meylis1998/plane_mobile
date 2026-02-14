@@ -24,10 +24,12 @@ workspace:
   - packages/features/feature_pages
   - packages/features/feature_search
   - packages/features/feature_notifications
+  - packages/features/feature_analytics
   - packages/presentation/ui_components
   - packages/presentation/theme
   - packages/services/file_service
   - packages/services/ai_service
+  - packages/services/push_notification_service
 
 dev_dependencies:
   melos: ^7.4.0

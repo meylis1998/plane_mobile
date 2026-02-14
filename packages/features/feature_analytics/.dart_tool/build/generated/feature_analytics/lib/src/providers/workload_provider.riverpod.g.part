@@ -1,0 +1,199 @@
+// **************************************************************************
+// RiverpodGenerator
+// **************************************************************************
+
+String _$workloadHash() => r'9968251afe8f110fa4aeb80ad65f577b65631c4d';
+
+/// Copied from Dart SDK
+class _SystemHash {
+  _SystemHash._();
+
+  static int combine(int hash, int value) {
+    // ignore: parameter_assignments
+    hash = 0x1fffffff & (hash + value);
+    // ignore: parameter_assignments
+    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
+    return hash ^ (hash >> 6);
+  }
+
+  static int finish(int hash) {
+    // ignore: parameter_assignments
+    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
+    // ignore: parameter_assignments
+    hash = hash ^ (hash >> 11);
+    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
+  }
+}
+
+/// Provides workload distribution across team members for a project.
+///
+/// Copied from [workload].
+@ProviderFor(workload)
+const workloadProvider = WorkloadFamily();
+
+/// Provides workload distribution across team members for a project.
+///
+/// Copied from [workload].
+class WorkloadFamily extends Family<AsyncValue<List<WorkloadItem>>> {
+  /// Provides workload distribution across team members for a project.
+  ///
+  /// Copied from [workload].
+  const WorkloadFamily();
+
+  /// Provides workload distribution across team members for a project.
+  ///
+  /// Copied from [workload].
+  WorkloadProvider call({
+    required String workspaceSlug,
+    required String projectId,
+    WorkloadSortOrder sort = WorkloadSortOrder.mostAssigned,
+  }) {
+    return WorkloadProvider(
+      workspaceSlug: workspaceSlug,
+      projectId: projectId,
+      sort: sort,
+    );
+  }
+
+  @override
+  WorkloadProvider getProviderOverride(covariant WorkloadProvider provider) {
+    return call(
+      workspaceSlug: provider.workspaceSlug,
+      projectId: provider.projectId,
+      sort: provider.sort,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'workloadProvider';
+}
+
+/// Provides workload distribution across team members for a project.
+///
+/// Copied from [workload].
+class WorkloadProvider extends AutoDisposeFutureProvider<List<WorkloadItem>> {
+  /// Provides workload distribution across team members for a project.
+  ///
+  /// Copied from [workload].
+  WorkloadProvider({
+    required String workspaceSlug,
+    required String projectId,
+    WorkloadSortOrder sort = WorkloadSortOrder.mostAssigned,
+  }) : this._internal(
+         (ref) => workload(
+           ref as WorkloadRef,
+           workspaceSlug: workspaceSlug,
+           projectId: projectId,
+           sort: sort,
+         ),
+         from: workloadProvider,
+         name: r'workloadProvider',
+         debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+             ? null
+             : _$workloadHash,
+         dependencies: WorkloadFamily._dependencies,
+         allTransitiveDependencies: WorkloadFamily._allTransitiveDependencies,
+         workspaceSlug: workspaceSlug,
+         projectId: projectId,
+         sort: sort,
+       );
+
+  WorkloadProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.workspaceSlug,
+    required this.projectId,
+    required this.sort,
+  }) : super.internal();
+
+  final String workspaceSlug;
+  final String projectId;
+  final WorkloadSortOrder sort;
+
+  @override
+  Override overrideWith(
+    FutureOr<List<WorkloadItem>> Function(WorkloadRef provider) create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: WorkloadProvider._internal(
+        (ref) => create(ref as WorkloadRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        workspaceSlug: workspaceSlug,
+        projectId: projectId,
+        sort: sort,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeFutureProviderElement<List<WorkloadItem>> createElement() {
+    return _WorkloadProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is WorkloadProvider &&
+        other.workspaceSlug == workspaceSlug &&
+        other.projectId == projectId &&
+        other.sort == sort;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, workspaceSlug.hashCode);
+    hash = _SystemHash.combine(hash, projectId.hashCode);
+    hash = _SystemHash.combine(hash, sort.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+mixin WorkloadRef on AutoDisposeFutureProviderRef<List<WorkloadItem>> {
+  /// The parameter `workspaceSlug` of this provider.
+  String get workspaceSlug;
+
+  /// The parameter `projectId` of this provider.
+  String get projectId;
+
+  /// The parameter `sort` of this provider.
+  WorkloadSortOrder get sort;
+}
+
+class _WorkloadProviderElement
+    extends AutoDisposeFutureProviderElement<List<WorkloadItem>>
+    with WorkloadRef {
+  _WorkloadProviderElement(super.provider);
+
+  @override
+  String get workspaceSlug => (origin as WorkloadProvider).workspaceSlug;
+  @override
+  String get projectId => (origin as WorkloadProvider).projectId;
+  @override
+  WorkloadSortOrder get sort => (origin as WorkloadProvider).sort;
+}
+
+// ignore_for_file: type=lint
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

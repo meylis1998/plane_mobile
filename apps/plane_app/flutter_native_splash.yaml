@@ -1,0 +1,22 @@
+# flutter_native_splash configuration for Plane mobile app.
+# Run: dart run flutter_native_splash:create --path=flutter_native_splash.yaml
+
+flutter_native_splash:
+  # Plane brand blue background
+  color: "#3F76FF"
+
+  # White logo placeholder — replace with actual asset when available.
+  # image: assets/splash_logo.png
+
+  # Android 12+ adaptive splash
+  android_12:
+    color: "#3F76FF"
+    # image: assets/splash_logo.png
+
+  # Keep the splash on screen while the app initializes
+  # (removed via FlutterNativeSplash.remove() in bootstrap).
+
+  # Platform toggles
+  android: true
+  ios: true
+  web: false

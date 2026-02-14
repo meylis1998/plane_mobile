@@ -1,0 +1,58 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'push_notification_providers.dart';
+
+// **************************************************************************
+// RiverpodGenerator
+// **************************************************************************
+
+String _$pushNotificationServiceHash() =>
+    r'd6006885b6191306c0d7ffc55bec1a59e909d870';
+
+/// Provides the singleton [PushNotificationService].
+///
+/// This provider is kept alive for the lifetime of the app because
+/// push notifications must be handled globally regardless of which
+/// screen is active.
+///
+/// Override this provider in [ProviderScope] if you need to inject
+/// a custom instance (e.g., for testing).
+///
+/// Copied from [pushNotificationService].
+@ProviderFor(pushNotificationService)
+final pushNotificationServiceProvider =
+    Provider<PushNotificationService>.internal(
+      pushNotificationService,
+      name: r'pushNotificationServiceProvider',
+      debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+          ? null
+          : _$pushNotificationServiceHash,
+      dependencies: null,
+      allTransitiveDependencies: null,
+    );
+
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
+typedef PushNotificationServiceRef = ProviderRef<PushNotificationService>;
+String _$fcmTokenHash() => r'854a3f6ef464f98cd37b7c214971731cd914e844';
+
+/// Provides the current FCM token as an async value.
+///
+/// Resolves once the initial token is available and rebuilds whenever
+/// the token is refreshed. Returns `null` if Firebase is not configured.
+///
+/// Copied from [FcmToken].
+@ProviderFor(FcmToken)
+final fcmTokenProvider = AsyncNotifierProvider<FcmToken, String?>.internal(
+  FcmToken.new,
+  name: r'fcmTokenProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$fcmTokenHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef _$FcmToken = AsyncNotifier<String?>;
+// ignore_for_file: type=lint
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

@@ -1,0 +1,25 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'workload_item.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$WorkloadItemImpl _$$WorkloadItemImplFromJson(Map<String, dynamic> json) =>
+    _$WorkloadItemImpl(
+      memberId: json['memberId'] as String,
+      memberName: json['memberName'] as String,
+      assignedCount: (json['assignedCount'] as num).toInt(),
+      completedCount: (json['completedCount'] as num).toInt(),
+      avatar: json['avatar'] as String?,
+    );
+
+Map<String, dynamic> _$$WorkloadItemImplToJson(_$WorkloadItemImpl instance) =>
+    <String, dynamic>{
+      'memberId': instance.memberId,
+      'memberName': instance.memberName,
+      'assignedCount': instance.assignedCount,
+      'completedCount': instance.completedCount,
+      'avatar': instance.avatar,
+    };

@@ -20,6 +20,7 @@ dependencies:
     path: ../../core/core_storage
   domain_core:
     path: ../../domain/domain_core
+  drift: ^2.23.1
 
 dev_dependencies:
   flutter_test:

@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Plane App</string>
+	<string>Plane</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -45,5 +45,11 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Plane needs camera access to take photos for avatars and attachments.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Plane needs photo library access to attach images to work items and pages.</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Plane uses Face ID for secure authentication.</string>
 </dict>
 </plist>

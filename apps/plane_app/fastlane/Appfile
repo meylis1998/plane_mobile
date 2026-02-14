@@ -1,0 +1,8 @@
+# iOS
+app_identifier("so.plane.mobile")
+apple_id(ENV["APPLE_ID"] || "developer@plane.so")
+team_id(ENV["APPLE_TEAM_ID"] || "")
+
+# Android
+json_key_file(ENV["GOOGLE_PLAY_JSON_KEY"] || "")
+package_name("so.plane.mobile")
